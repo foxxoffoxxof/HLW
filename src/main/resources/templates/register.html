@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>注册</title>
+</head>
+<body>
+<form action="register" name="register" accept-charset="utf-8" method="post">
+    <div>注册系统</div>
+    <table>
+        <tr>
+            <td>用户名：</td>
+            <td><input type="text" name="number" required="true"/></td>
+        </tr>
+
+        <tr>
+            <td>姓名：</td>
+            <td><input type="text" name="name" required="true"/></td>
+        </tr>
+
+        <tr>
+            <td>性别：</td>
+            <td><input type="text" name="sex" required="true"/></td>
+        </tr>
+
+        <tr>
+            <td>出生年月：</td>
+            <td><input type="text" name="date" required="true"/></td>
+        </tr>
+
+        <tr>
+            <td>电话：</td>
+            <td><input type="text" name="tel" required="true"/></td>
+        </tr>
+
+        <tr>
+            <td>密码：</td>
+            <td><input type="password" name="password" value="" required="true"/></td>
+        </tr>
+
+    </table>
+    <input type="submit" name="注册" value="注册"/>
+    <input type="button" name="返回" value="返回" onclick ="location.href='login'"/>
+</form>
+    <div th:unless="${#strings.isEmpty(mess)}"  th:text="${mess}">用户名被注册</div>
+</body>
+</html>

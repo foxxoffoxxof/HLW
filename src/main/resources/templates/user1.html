@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>普通用户系统</title>
+    <div>
+        <h3 th:text="'欢迎您：：' + ${session.name} + '，请选择你需要的功能'"></h3>
+    </div>
+</head>
+<body>
+<form action="/user1" name="user1" accept-charset="utf-8" method="post">
+    <input type="button"  value="查询自身信息" onclick ="location.href='user1query'"/>
+    <input type="button"  value="修改自身信息" onclick ="location.href='touser1modify'"/>
+    <input type="button"  value="删除自身信息" onclick ="location.href='touser1delete'"/>
+    <input type="button"  value="修改密码" onclick ="location.href='touser1pwd'"/>
+    <input type="button"  value="退出系统" onclick ="location.href='login'"/>
+</form>
+</body>
+</html>

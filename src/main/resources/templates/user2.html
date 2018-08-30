@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>管理员系统</title>
+    <div>
+        <h3 th:text="'欢迎您：：管理员，请选择你需要的功能'"></h3>
+    </div>
+</head>
+<body>
+<form action="/user2" name="user2" accept-charset="utf-8" method="post">
+    <input type="button"  value="管理用户" onclick ="location.href='user2query'"/>
+    <input type="button"  value="退出系统" onclick ="location.href='login'"/>
+</form>
+</body>
+</html>
